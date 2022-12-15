@@ -1,4 +1,11 @@
-def shellSort(array, n):
+import random
+
+arr = [x for x in range(100)]
+random.shuffle(arr)
+print('Przetasowana tablica: ')
+print(arr)
+
+def shell_sort(array, n):
     interval = n // 2
 
     while interval > 0:
@@ -14,8 +21,6 @@ def shellSort(array, n):
         interval //= 2
 
 
-data = [x for x in range(100)]
-size = len(data)
-shellSort(data, size)
-print('Sorted Array in Ascending Order:')
-print(data)
+shell_sort(arr, len(arr))
+print('Posortowana tablica: ')
+print(arr)

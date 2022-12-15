@@ -30,21 +30,6 @@ def bubble_sort(option):
     else:
         print("Nie ma takiej opcji")
 
-def another_bubble_sort(option):
-    if int(option) == 1:
-        for i in range(len(list1)):
-            for j in range(len(list1)):
-                if list1[i] > list1[j]:
-                    list1[j], list1[i] = list1[i], list1[j]
-
-    elif int(option) == 2:
-        for i in range(len(list1)):
-            for j in range(len(list1)):
-                if list1[i] > list1[j]:
-                    list1[j], list1[i] = list1[i], list1[j]
-
-    else:
-        print("nie ma takiej opcji")
 
 if __name__ == '__main__':
     print("Jak chcesz posortować zbiór?")
