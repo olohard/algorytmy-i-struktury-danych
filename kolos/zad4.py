@@ -12,7 +12,7 @@ def dominant_finder(arr):
     max_amount = max(some_arr)
 
     for i in dominant:
-        if max_amount == dominant[i]:
+        if max_amount == dominant[i] and i != max(dominant) and i != min(dominant):
             dominants.append(i)
 
     print(dominant)
