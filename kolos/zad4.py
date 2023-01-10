@@ -1,23 +1,22 @@
-arr = [7, 7, 2, 2, 3, 5, 1, 6, 3, 4]
+arr = [5, 2, 2, 3, 5, 3, 6, 4]
 
-def most_frequent(arr):
-    counter = 0
-    dominant = []
-
-    for i in arr:
-        curr_frequency = arr.count(i)
-
-        if curr_frequency >= counter:
-            counter = curr_frequency
-            dominant.append(i)
-
+def dominant_finder(arr):
+    some_arr = []
+    dominant = {}
     dominants = []
 
-    for one_dominant in dominant:
-        if one_dominant not in dominants:
-            dominants.append(one_dominant)
+    for i in arr:
+        dominant[i] = arr.count(i)
+        some_arr.append(dominant[i])
 
+    max_amount = max(some_arr)
+
+    for i in dominant:
+        if max_amount == dominant[i]:
+            dominants.append(i)
+
+    print(dominant)
     print(dominants)
 
-most_frequent(arr)
+dominant_finder(arr)
 
