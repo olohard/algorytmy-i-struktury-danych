@@ -1,14 +1,23 @@
-def most_frequent(List):
+arr = [7, 7, 2, 2, 3, 5, 1, 6, 3, 4]
+
+def most_frequent(arr):
     counter = 0
-    num = List[0]
+    dominant = []
 
-    for i in List:
-        curr_frequency = List.count(i)
-        if curr_frequency> counter:
+    for i in arr:
+        curr_frequency = arr.count(i)
+
+        if curr_frequency >= counter:
             counter = curr_frequency
-            num = i
+            dominant.append(i)
 
-    return num
+    dominants = []
 
-List = [2, 1, 2, 2, 1, 3, 2, 3, 4, 2, 3, 1, 1, 1]
-print(most_frequent(List))
+    for one_dominant in dominant:
+        if one_dominant not in dominants:
+            dominants.append(one_dominant)
+
+    print(dominants)
+
+most_frequent(arr)
+
