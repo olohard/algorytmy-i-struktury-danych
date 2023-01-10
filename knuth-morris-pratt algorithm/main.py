@@ -4,7 +4,6 @@ def build_tab(patt):
     pos = arr[0] = -1
 
     for i in range(1, arr_len):
-
         while pos > -1 and patt[pos] != patt[i - 1]:
             pos = arr[pos]
         pos += 1
